@@ -120,7 +120,7 @@
     
     _myCameraViewHandler = [[CGECameraViewHandler alloc] initWithGLKView:_glkView];
     
-    if([_myCameraViewHandler setupCamera: MYAVCaptureSessionPreset(RECORD_HEIGHT, RECORD_WIDTH) isFrontCameraMirrored:YES authorizationFailed:^{
+    if([_myCameraViewHandler setupCamera: MYAVCaptureSessionPreset(RECORD_HEIGHT, RECORD_WIDTH) authorizationFailed:^{
         NSLog(@"Not allowed to open camera and microphone, please choose allow in the 'settings' page!!!");
     }])
     {
